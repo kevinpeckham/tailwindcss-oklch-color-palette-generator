@@ -21,27 +21,27 @@
 			{
 				"label": "Customizing Colors in TailwindCSS",
 				"href": "https://tailwindcss.com/docs/customizing-colors",
-				"rel": ""
+				"rel": "external"
 			},
 			{
 				"label": "Using OKLCH Colors in TailwindCSS",
 				"href": "https://1902.studio/en/journal/using-oklch-colors-in-tailwind-css#:~:text=In%20Tailwind%20it%20is%20not%20possible%20to%20define,to%20classes%20like%20this%3A%20bg-primary%20supports-%20%5Bcolor%3Aoklch%20%280_0_0%29%5D%3Abg-primary-oklch",
-				"rel": ""
+				"rel": "external"
 			},
 			{
 				"label": "@csstools/postcss-oklab-function",
 				"href": "https://www.npmjs.com/package/@csstools/postcss-oklab-function",
-				"rel": ""
+				"rel": "external"
 			},
 			{
 				"label": "OKLCH Color Converter",
 				"href": "https://oklch.com",
-				"rel": ""
+				"rel": "external"
 			},
 			{
 				"label": "OKLCH in CSS: Why We Should Quit RGB and HSL",
 				"href": "https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl",
-				"rel": ""
+				"rel": "external"
 			}
 		]
 	},
@@ -60,7 +60,7 @@
 	},
 	"repository": {
 		"label": "View on GitHub",
-		"href": "",
+		"href": "https://github.com/kevinpeckham/tailwindcss-oklch-color-palette-generator",
 		"rel": "external"
 	}
 }
