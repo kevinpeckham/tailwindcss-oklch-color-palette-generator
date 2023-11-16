@@ -1,0 +1,18 @@
+version: "0.2"
+language: en
+ignoreRegExpList:
+  - /\w{20}/gi
+  - /\w{25}/gi
+useGitIgnore: true
+ignorePaths:
+  - ./cspell.config.yaml
+dictionaryDefinitions: []
+dictionaries: []
+words:
+  - allowtransparency
+  - Björn
+  - csstools
+  - Ottosson
+  - tailwindcss
+ignoreWords: []
+import: []

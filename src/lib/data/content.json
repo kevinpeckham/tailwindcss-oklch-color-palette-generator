@@ -1,0 +1,66 @@
+{
+	"pageHeading": "TailwindCSS Custom OKLCH Color Palette Generator",
+	"pageSubheading": "Enter an OKLCH color and generate a custom color palette and the code you need to add to your TailwindCSS config file to use it.",
+	"notesSection": {
+		"heading": "Notes",
+		"notes": [
+			"OKLCH is a great color space for web design",
+			"OKLCH makes it easy to generate color shades from a single color",
+			"This tool generates a custom color palette from a single color or colors using OKLCH",
+			"This tool also generates the code you need for your TailwindCSS config file",
+			"Not all browsers support OKLCH colors, so fallbacks are necessary",
+			"Tailwindcss does not support color fallbacks out of the box, so a POSTCSS plugin is required to generate fallbacks",
+			"This tool does not generate fallbacks, but it does generate the code you need to add to your config file to generate fallbacks",
+			"Postcss and the postcss-oklab-function plugin are required to generate the fallbacks",
+			"This is v0.0.1 and is a very early version of this tool, there are likely bugs and issues"
+		]
+	},
+	"moreReadingSection": {
+		"heading": "More Reading",
+		"links": [
+			{
+				"label": "Customizing Colors in TailwindCSS",
+				"href": "https://tailwindcss.com/docs/customizing-colors",
+				"rel": ""
+			},
+			{
+				"label": "Using OKLCH Colors in TailwindCSS",
+				"href": "https://1902.studio/en/journal/using-oklch-colors-in-tailwind-css#:~:text=In%20Tailwind%20it%20is%20not%20possible%20to%20define,to%20classes%20like%20this%3A%20bg-primary%20supports-%20%5Bcolor%3Aoklch%20%280_0_0%29%5D%3Abg-primary-oklch",
+				"rel": ""
+			},
+			{
+				"label": "@csstools/postcss-oklab-function",
+				"href": "https://www.npmjs.com/package/@csstools/postcss-oklab-function",
+				"rel": ""
+			},
+			{
+				"label": "OKLCH Color Converter",
+				"href": "https://oklch.com",
+				"rel": ""
+			},
+			{
+				"label": "OKLCH in CSS: Why We Should Quit RGB and HSL",
+				"href": "https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl",
+				"rel": ""
+			}
+		]
+	},
+	"creditsSection": {
+		"heading": "Credits",
+		"credits": [
+			{
+				"text": "This work is deeply indebted to and derivative of work by Björn Ottosson the originator of the Oklab and OKLCH color spaces. Read more about the Oklab color space from his blog link below.",
+				"link": {
+					"label": "A perceptual color space for image processing",
+					"href": "https://bottosson.github.io/posts/oklab/",
+					"rel": "external"
+				}
+			}
+		]
+	},
+	"repository": {
+		"label": "View on GitHub",
+		"href": "",
+		"rel": "external"
+	}
+}
