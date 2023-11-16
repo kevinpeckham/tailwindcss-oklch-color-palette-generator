@@ -97,6 +97,7 @@ export let data: PageData;
 							//- color value
 							div.whitespace-nowrap(class="lg:hidden") Color {index + 1}
 							label(
+								for!="color-{index + 1}-value"
 								class=`
 									hidden
 									opacity-80
@@ -105,6 +106,7 @@ export let data: PageData;
 								`
 							) Color
 							input(
+								id!="color-{index + 1}-value"
 								class=`
 									px-2
 									py-2
@@ -119,6 +121,7 @@ export let data: PageData;
 
 							//- color name
 							label(
+								for!="color-{index + 1}-name"
 								class=`
 									hidden
 									opacity-80
@@ -126,6 +129,7 @@ export let data: PageData;
 									lg:block
 								`) Name
 							input(
+								id!="color-{index + 1}-name"
 								class=`
 									px-2
 									py-2
@@ -200,7 +204,7 @@ export let data: PageData;
 				p.mb-2 {credit.text}
 				a.block.underline.mb-1(
 					href!="{credit.link.href}"
-					rel="external"
+					rel!="{credit.link.rel}"
 					) {credit.link.label}
 
 	footer#footer.page-x-padding.pb-20.text-14.grid.grid-cols-1.gap-y-4
