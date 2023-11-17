@@ -148,8 +148,6 @@ const inputs = [
 												`
 										) {input.label}
 
-
-
 		section#swatches
 			h2.font-semibold.mb-3 Swatches
 			+each('colors as color, index')
@@ -202,9 +200,9 @@ const inputs = [
 
 		section#notes
 			h2.font-semibold.mb-3 {data.notesSection.heading}
-			ul.grid.grid-cols-1.gap-y-1.list-disc.list-outside.pl-3
+			ul.grid.grid-cols-1.gap-y-1.list-disc.list-outside.pl-5
 				+each('data.notesSection.notes as note')
-					li
+					li.opacity-90
 						+html('note')
 
 		section#more-reading
@@ -227,8 +225,8 @@ const inputs = [
 		section#credits
 			h2.font-medium.mb-2 {data.creditsSection.heading}
 			+each('data.creditsSection.credits as credit')
-				p.mb-2 {credit.text}
-				a(
+				p.mb-2.opacity-90 {credit.text}
+				a.opacity-90(
 					class=`block underlinable focusable hoverable mb-1`
 					href!="{credit.link.href}"
 					rel!="{credit.link.rel}"
