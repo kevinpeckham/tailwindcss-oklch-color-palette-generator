@@ -1,17 +1,19 @@
 {
-	"pageHeading": "TailwindCSS Custom OKLCH Color Palette Generator",
-	"pageSubheading": "Enter an OKLCH color and generate a custom color palette and the code you need to add to your TailwindCSS config file to use it.",
+	"header": {
+		"heading": "ColorGraffle: A Custom OKLCH Color Palette Generator for TailwindCSS",
+		"text": "Enter an OKLCH color and generate a custom color palette and the code you need to add to your TailwindCSS config file to use it."
+	},
 	"notesSection": {
 		"heading": "Notes",
 		"notes": [
-			"OKLCH is a great color space for web design",
+			"OKLCH is a great color space for web design, it is perceptually uniform and has a very wide gamut",
 			"OKLCH makes it easy to generate color shades from a single color",
 			"This tool generates a custom color palette from a single color or colors using OKLCH",
-			"This tool also generates the code you need for your TailwindCSS config file",
+			"This tool also generates the code you need for your TailwindCSS config file to use your custom palette",
 			"Not all browsers support OKLCH colors, so fallbacks are necessary",
-			"Tailwindcss does not support color fallbacks out of the box, so a POSTCSS plugin is required to generate fallbacks",
+			"TailwindCSS does not support color fallbacks out of the box, so a PostCSS plugin is required to generate fallbacks",
 			"This tool does not generate fallbacks, but it does generate the code you need to add to your config file to generate fallbacks",
-			"Postcss and the postcss-oklab-function plugin are required to generate the fallbacks",
+			"<a  class=\"underlinable focusable hoverable\" href=\"https://postcss.org/\" rel=\"target\">PostCSS</a> and the <a  class=\"underlinable focusable hoverable\" href=\"https://www.npmjs.com/package/@csstools/postcss-oklab-function\" rel=\"target\">postcss-oklab-function</a> plugin are required to generate the fallbacks",
 			"This is v0.0.1 and is a very early version of this tool, there are likely bugs and issues"
 		]
 	},
@@ -49,6 +51,7 @@
 		"heading": "Credits",
 		"credits": [
 			{
+				"heading": "Björn Ottosson",
 				"text": "This work is deeply indebted to and derivative of work by Björn Ottosson the originator of the Oklab and OKLCH color spaces. Read more about the Oklab color space from his blog link below.",
 				"link": {
 					"label": "A perceptual color space for image processing",
@@ -58,9 +61,21 @@
 			}
 		]
 	},
-	"repository": {
-		"label": "View on GitHub",
-		"href": "https://github.com/kevinpeckham/tailwindcss-oklch-color-palette-generator",
-		"rel": "external"
+	"footer": {
+		"attribution": "",
+		"links": [
+			{
+				"label": "View on GitHub",
+				"href": "https://github.com/kevinpeckham/tailwindcss-oklch-color-palette-generator",
+				"rel": "external",
+				"title": "view repository on Github"
+			},
+			{
+				"label": "MIT License",
+				"href": "https://github.com/kevinpeckham/tailwindcss-oklch-color-palette-generator/blob/master/LICENSE",
+				"rel": "external",
+				"title": "view license on Github"
+			}
+		]
 	}
 }
