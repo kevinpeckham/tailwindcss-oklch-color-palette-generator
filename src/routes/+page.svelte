@@ -117,19 +117,8 @@ const inputs = [
 							lg:items-center
 							lg:place-items-start
 							`)
-							//-.whitespace-nowrap.mb-1(
-								class=``
-								) Color {index + 1}
 							+each('inputs as input')
 								.w-full
-									//-label(
-										for!="color-{index + 1}-{input.id}"
-										class=`
-											hidden
-											opacity-80
-											whitespace-nowrap
-										`
-										) Color
 									.group.relative.w-full
 										input(
 											id!="color-{index + 1}-{input.id}"
