@@ -64,6 +64,18 @@ let value: string;
 export let data: PageData;
 
 
+const inputs = [
+	{
+	bind: "inputColor",
+	label: "Color",
+	placeholder: "oklch(70% 0.1 358)",
+	id: "value"
+}, {
+	bind: "name",
+	label: "Name",
+	placeholder: "rose",
+	id: "name"
+}];
 
 
 </script>
@@ -80,65 +92,77 @@ export let data: PageData;
 
 		section#inputs
 			h2.font-semibold.mb-3 Input Colors
-			.grid.grid-cols-1.gap-y-6
+			div(
+				class=`
+					gap-y-6
+					grid
+					grid-cols-1
+					lg:gap-x-4
+					lg:grid-cols-3
+					xl:grid-cols-4
+					`
+				)
 				+each('colors as color, index')
 
 					+if('index == 0 || colors[(index - 1)]?.inputColor')
 						div(class=`
+							bg-exampleBlue-500/40
 							gap-y-2
 							grid
 							grid-cols-1
-							lg:grid-cols-[6ch_260px_12px_6ch_260px_1fr]
+							p-2
+							rounded
+							lg:grid-cols-1
 							lg:gap-x-2
 							lg:items-center
 							lg:place-items-start
 							`)
+							//-.whitespace-nowrap.mb-1(
+								class=``
+								) Color {index + 1}
+							+each('inputs as input')
+								.w-full
+									//-label(
+										for!="color-{index + 1}-{input.id}"
+										class=`
+											hidden
+											opacity-80
+											whitespace-nowrap
+										`
+										) Color
+									.group.relative.w-full
+										input(
+											id!="color-{index + 1}-{input.id}"
+											class=`
+												px-2
+												pt-6
+												pb-2
+												rounded
+												text-exampleBlue-600
+												w-full
+												`
+											style!="min-width: 25ch;"
+											bind:value!="{colors[index][input.bind]}",
+											placeholder!="{input.placeholder}",
+											type="text")
+										label(
+											for!="color-{index + 1}-{input.id}"
+											class=`
+												absolute
+												font-semibold
+												left-0
+												pl-2
+												pointer-events-none
+												pt-1
+												text-13
+												top-0
+												`
+										) {input.label}
 
-							//- color value
-							div.whitespace-nowrap(class="lg:hidden") Color {index + 1}
-							label(
-								for!="color-{index + 1}-value"
-								class=`
-									hidden
-									opacity-80
-									whitespace-nowrap
-									lg:block
-								`
-							) Color
-							input(
-								id!="color-{index + 1}-value"
-								class=`
-									px-2
-									py-2
-									w-full`
-								style!="min-width: 25ch;"
-								bind:value!="{colors[index].inputColor}",
-								placeholder = "oklch(70% 0.1 358)",
-								type="text")
 
-							//- spacer
-							div.hidden(class="lg:block") &nbsp;
-
-							//- color name
-							label(
-								for!="color-{index + 1}-name"
-								class=`
-									hidden
-									opacity-80
-									whitespace-nowrap
-									lg:block
-								`) Name
-							input(
-								id!="color-{index + 1}-name"
-								class=`
-									px-2
-									py-2
-									w-full`
-								bind:value!="{colors[index].name}",
-								placeholder="rose",
-								type="text")
 
 		section#swatches
+			h2.font-semibold.mb-3 Swatches
 			+each('colors as color, index')
 				+const('shades = color.inputColor ? generateColorShades(color.inputColor) : null')
 				+const('values = shades ? Object.values(shades) : null')
@@ -147,7 +171,7 @@ export let data: PageData;
 
 				//- name
 				+if('values')
-					.font-medium.mb-3 {name}
+					.font-medium.mb-2.text-15 {name}
 
 				//- swatches
 				+if('values && keys')
@@ -184,7 +208,7 @@ export let data: PageData;
 					//- tailwind config
 					+if('color.inputColor')
 						+const('name = color.name ? color.name : "untitled"')
-						textarea.w-full.p-4.rounded(style!="height:16lh;")
+						textarea.w-full.px-4.rounded(class="py-[.5lh]" style!="height:15.5lh;")
 							| {generateTailwindCustomColorShades(color.inputColor, name)}
 
 		section#notes
@@ -211,7 +235,7 @@ export let data: PageData;
 		div.opacity-70(class="lg:hover:opacity-100")
 			| Made with&nbsp;
 			a(href="https://svelte.dev/" rel="external") Svelte
-			| &nbsp; by Kevin Peckham @
+			| &nbsp; by Kevin Peckham @&nbsp;
 			a(href="https://lightningjar.com" rel="external") Lightning Jar
 			| &nbsp;in Philadelphia.
 		a.block.underline.opacity-70(href!="{data.repository.href}" rel="{data.repository.rel}") {data.repository.label}
