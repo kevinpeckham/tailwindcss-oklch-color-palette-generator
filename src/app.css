@@ -9,4 +9,32 @@
 	.main-y-padding {
 		@apply py-12 sm:py-16;
 	}
+
+	.underlinable {
+		@apply
+		decoration-exampleBlue-800/40
+		underline
+		underline-offset-4
+	}
+
+	.focusable {
+		@apply
+		outline
+		outline-transparent
+		outline-[0.2em]
+		outline-offset-4
+		rounded
+		transition-opacity
+		focus:outline-blue-500
+		focus:opacity-100
+		focus:text-exampleBlue-700
+		focus:no-underline
+	}
+	.hoverable {
+		@apply
+		transition-opacity
+		lg:hover:opacity-100
+		lg:hover:text-exampleBlue-700
+		lg:hover:decoration-exampleBlue-600
+	}
 }
