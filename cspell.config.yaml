@@ -12,8 +12,11 @@ words:
   - allowtransparency
   - Björn
   - csstools
+  - focusable
+  - hoverable
   - Ottosson
   - Peckham
   - tailwindcss
+  - underlinable
 ignoreWords: []
 import: []
