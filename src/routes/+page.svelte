@@ -233,13 +233,12 @@ const inputs = [
 					) {credit.link.label}
 
 	footer#footer.page-x-padding.pb-20.text-14.grid.grid-cols-1.gap-y-4
-		div.opacity-70(class="lg:hover:opacity-100")
-			| Made with&nbsp;
-			a(href="https://svelte.dev/" rel="external") Svelte
-			| &nbsp; by Kevin Peckham @&nbsp;
-			a(href="https://lightningjar.com" rel="external") Lightning Jar
-			| &nbsp;in Philadelphia.
 
+		//- attribution
+		div.opacity-70(class="lg:hover:opacity-100")
+			+html('data.footer.attribution')
+
+		//- footer links
 		.flex.gap-4
 			+each('data.footer.links as link')
 				a(
