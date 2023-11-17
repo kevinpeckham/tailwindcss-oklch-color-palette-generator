@@ -62,7 +62,7 @@
 		]
 	},
 	"footer": {
-		"attribution": "",
+		"attribution": "Made with <a class=\"underlinable hoverable focusable\" href=\"https://svelte.dev/\" rel=\"external\">Svelte</a> by Kevin Peckham @ <a class=\"underlinable hoverable focusable\" href=\"https://lightningjar.com\" rel=\"external\">Lightning Jar</a> in Philadelphia.",
 		"links": [
 			{
 				"label": "View on GitHub",
