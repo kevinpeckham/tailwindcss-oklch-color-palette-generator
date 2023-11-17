@@ -82,11 +82,11 @@ const inputs = [
 
 <template lang="pug">
 	svelte:head
-		title TailwindCSS Custom OKLCH Color Palette Generator
+		title ColorGraffle: A Custom TailwindCSS Custom OKLCH Color Palette Generator
 
 	header.page-x-padding.pt-4
-		h1.font-semibold.mb-3.text-24 {data.pageHeading}
-		.max-w-lg {data.pageSubheading}
+		h1.font-semibold.mb-3.text-24 {data.header.heading}
+		.max-w-lg {data.header.text}
 
 	main.page-x-padding.main-y-padding.grid.grid-cols-1.gap-y-8.mb-8
 
@@ -200,7 +200,7 @@ const inputs = [
 									`
 								) {keys[index] == "DEFAULT" ? " (default)" : keys[index]}
 
-		section.w-full#config
+		section#config.w-full
 			h2.font-semibold.mb-3 TailwindCSS Config
 			div
 				+each('colors as color')
@@ -215,18 +215,32 @@ const inputs = [
 			h2.font-semibold.mb-3 {data.notesSection.heading}
 			ul.grid.grid-cols-1.gap-y-1.list-disc.list-outside.pl-3
 				+each('data.notesSection.notes as note')
-					li {note}
+					li
+						+html('note')
 
 		section#more-reading
 			h2.font-medium.mb-2 {data.moreReadingSection.heading}
 			+each('data.moreReadingSection.links as link')
-				a.block.underline.mb-1(href="{link.href}" rel="external") {link.label}
+				a(
+					class=`
+						block
+						mb-1
+						w-fit
+						opacity-90
+						underlinable
+						focusable
+						hoverable
+						`
+					href="{link.href}"
+					rel="external"
+					) {link.label}
 
 		section#credits
 			h2.font-medium.mb-2 {data.creditsSection.heading}
 			+each('data.creditsSection.credits as credit')
 				p.mb-2 {credit.text}
-				a.block.underline.mb-1(
+				a(
+					class=`block underlinable focusable hoverable mb-1`
 					href!="{credit.link.href}"
 					rel!="{credit.link.rel}"
 					) {credit.link.label}
@@ -238,5 +252,21 @@ const inputs = [
 			| &nbsp; by Kevin Peckham @&nbsp;
 			a(href="https://lightningjar.com" rel="external") Lightning Jar
 			| &nbsp;in Philadelphia.
-		a.block.underline.opacity-70(href!="{data.repository.href}" rel="{data.repository.rel}") {data.repository.label}
+
+		.flex.gap-4
+			+each('data.footer.links as link')
+				a(
+					class=`
+						block
+						opacity-70
+						underlinable
+						w-fit
+						focusable
+						hoverable
+					`
+					href!="{link.href}"
+					rel="{link.rel}"
+					title!="{link.title}"
+					) {link.label}
+
 </template>
