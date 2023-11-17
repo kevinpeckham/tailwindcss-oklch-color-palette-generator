@@ -25,6 +25,22 @@ const config = {
 			$types: "./src/lib/types",
 			$utils: "./src/lib/utils",
 		},
+		csp: {
+			directives: {
+				"object-src": ["none"],
+				"script-src": [
+				"self",
+				"https://plausible.io",
+				"sha256-+X7Z1KW2Vcl9pendYbp0FYL6F0HZek43aBP/14cwq+U=",
+        // ^^ for sentry inline script
+        // more info: https://github.com/getsentry/sentry-javascript/issues/8925
+				],
+				"style-src": ["self", "unsafe-inline"],
+				"worker-src": ["self"],
+				"frame-src": ["none"],
+				"child-src": ["self"]
+			},
+		},
 	},
 };
 
