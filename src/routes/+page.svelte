@@ -206,7 +206,7 @@ const inputs = [
 						+html('note')
 
 		section#more-reading
-			h2.font-medium.mb-2 {data.moreReadingSection.heading}
+			h2.font-semibold.mb-2 {data.moreReadingSection.heading}
 			+each('data.moreReadingSection.links as link')
 				a(
 					class=`
@@ -218,19 +218,22 @@ const inputs = [
 						focusable
 						hoverable
 						`
-					href="{link.href}"
+					href!="{link.href}"
 					rel="external"
+					title!="{link.title}"
 					) {link.label}
 
 		section#credits
-			h2.font-medium.mb-2 {data.creditsSection.heading}
+			h2.font-semibold.mb-3 {data.creditsSection.heading}
 			+each('data.creditsSection.credits as credit')
-				p.mb-2.opacity-90 {credit.text}
-				a.opacity-90(
-					class=`block underlinable focusable hoverable mb-1`
-					href!="{credit.link.href}"
-					rel!="{credit.link.rel}"
-					) {credit.link.label}
+				div.max-w-xl
+					h3.font-medium.mb-1 {credit.heading}
+					p.mb-2.opacity-90 {credit.text}
+					a.opacity-90(
+						class=`block underlinable focusable hoverable mb-1`
+						href!="{credit.link.href}"
+						rel!="{credit.link.rel}"
+						) {credit.link.label}
 
 	footer#footer.page-x-padding.pb-20.text-14.grid.grid-cols-1.gap-y-4
 

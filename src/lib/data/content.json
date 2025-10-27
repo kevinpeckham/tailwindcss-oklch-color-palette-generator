@@ -23,27 +23,38 @@
 			{
 				"label": "Customizing Colors in TailwindCSS",
 				"href": "https://tailwindcss.com/docs/customizing-colors",
-				"rel": "external"
+				"rel": "external",
+				"title": "TailwindCSS documentation on customizing colors"
 			},
 			{
 				"label": "Using OKLCH Colors in TailwindCSS",
 				"href": "https://1902.studio/en/journal/using-oklch-colors-in-tailwind-css#:~:text=In%20Tailwind%20it%20is%20not%20possible%20to%20define,to%20classes%20like%20this%3A%20bg-primary%20supports-%20%5Bcolor%3Aoklch%20%280_0_0%29%5D%3Abg-primary-oklch",
-				"rel": "external"
+				"rel": "external",
+				"title": "A handy article explaining how to use OKLCH colors in TailwindCSS"
 			},
 			{
 				"label": "@csstools/postcss-oklab-function",
 				"href": "https://www.npmjs.com/package/@csstools/postcss-oklab-function",
-				"rel": "external"
+				"rel": "external",
+				"title": "The PostCSS plugin that lets you use oklab and oklch color functions in CSS"
 			},
 			{
 				"label": "OKLCH Color Converter",
 				"href": "https://oklch.com",
-				"rel": "external"
+				"rel": "external",
+				"title": "A tool to help you convert colors to OKLCH"
 			},
 			{
 				"label": "OKLCH in CSS: Why We Should Quit RGB and HSL",
 				"href": "https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl",
-				"rel": "external"
+				"rel": "external",
+				"title": "A great article explaining why OKLCH is a great color space for web design"
+			},
+			{
+				"label": "The oklch() CSS function",
+				"href": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch()",
+				"rel": "external",
+				"title": "MDN documentation on the oklch() CSS function"
 			}
 		]
 	},
@@ -52,7 +63,7 @@
 		"credits": [
 			{
 				"heading": "Björn Ottosson",
-				"text": "This work is deeply indebted to and derivative of work by Björn Ottosson the originator of the Oklab and OKLCH color spaces. Read more about the Oklab color space from his blog link below.",
+				"text": "This work is deeply indebted to and derivative of the work and equations by Björn Ottosson the originator of the Oklab and OKLCH color spaces. Read more about the Oklab color space from his blog link below.",
 				"link": {
 					"label": "A perceptual color space for image processing",
 					"href": "https://bottosson.github.io/posts/oklab/",
