@@ -10,7 +10,7 @@ const config = {
 	kit: {
 		adapter: vercel({
 			// make explicit -- vercel does not yet support later node versions
-			runtime: "nodejs18.x",
+			runtime: "nodejs22.x",
 		}),
 		alias: {
 			$atoms: "./src/lib/components/atoms",
